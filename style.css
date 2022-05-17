@@ -331,6 +331,7 @@ background-color: var(--color-orange);
   font-size: var(--font-regular);
   padding: 8px 48px;
   color: var(--color-black);
+  position: relative;
 }
 
 .category__btn.selected,
@@ -343,7 +344,10 @@ background-color: var(--color-orange);
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
+  
 }
+
+
 
 .category__count{
   background-color: var(--color-orange);
@@ -355,15 +359,17 @@ background-color: var(--color-orange);
   /*span과 같은 block 요소에
   높이와 넓이를 지정해주고 싶을때 사용*/
   line-height:24px ;
-  position: relative;
+  
   /*요소 자기 자신의 원래 위치(static일 때의 위치)
   를 기준으로 배치한다.원래 위치를 기준으로
   위쪽(top), 아래쪽(bottom), 왼쪽(left),
   오른쪽(right)에서 얼마만큼 떨어질 지 결정한다.*/
-  top: -20px;
-  left:4px;
   opacity: 0;
-  transition: var(--animation-duration);
+  transition: var(--animation-duration)ease-in;
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  
 }
 
 .work__projects{
@@ -564,7 +570,30 @@ background-color: var(--color-dark-white);
   flex-direction: column;
 }
 
+.category__btn{
+  margin: 4px 0;
+ 
+}
+
+
+
 .project{
   flex-grow:1;
+}
+
+.testimonial{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial__speech-bubble{
+  order:1;
+}
+
+.testimonial img{
+  margin-bottom: 13px;
+  width: 180px;
+  height: 200px;
 }
 }
