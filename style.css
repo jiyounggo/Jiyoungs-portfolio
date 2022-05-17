@@ -544,6 +544,7 @@ background-color: var(--color-dark-white);
   #navbar{
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-pink);
   }
 
 .navbar__menu{
@@ -551,6 +552,7 @@ background-color: var(--color-dark-white);
   text-align: center;
   width: 100%;
   display: none;
+  background-color: var(--color-pink);
 }
 
 .open{
@@ -560,7 +562,7 @@ background-color: var(--color-dark-white);
 .about__majors{
   flex-direction: column;
   align-items: center;
-
+margin-top: 20px;
 }
 .major__description{
   margin-bottom: 35px;
