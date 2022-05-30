@@ -599,3 +599,42 @@ margin-top: 20px;
   height: 200px;
 }
 }
+
+/* loadging... */
+*{
+  margin: 0 auto; 
+}
+
+.loader{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:lightpink;
+  z-index: 9999;
+  opacity: 1;
+  transition: all 1500ms ease;
+}
+
+.loader .load {
+  color: white;
+  position: absolute;
+  top: 505px;
+  left: 550px;
+}
+.loader i{
+  font-size: 80px;
+  position: absolute;
+  top: 50%; left: 50%;
+  margin: -40px 0 0 -40px;
+  color: #fff;
+}
+
+.wrap{
+  position: relative;
+  width: 600px;
+  height: 1500px;
+  padding: 50px 0;
+  background: #b6c9f0;
+}
+
