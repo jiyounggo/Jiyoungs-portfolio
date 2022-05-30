@@ -142,8 +142,16 @@ html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 window.addEventListener('load', ()=>{
 
      setTimeout(() => { //로딩속도 구현
+    
+        // loader.classList.add('invisible');
          loader.style.opacity = '0';
          html.style.overflow = 'auto'; //스크롤 방지 해제
-  }, 2500);
+        
+        setTimeout(() => {
+        loader.style.display = 'none';
+          
+      }, 1000);
+        
+  }, 2000);
 
 })
