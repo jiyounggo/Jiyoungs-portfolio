@@ -467,7 +467,8 @@ section {
   position: relative;
   width: 280px;
   height: 250px;
-  margin: 2px;
+  margin: 10px;
+  box-shadow: 2px 3px 15px -3px rgba(0, 0, 0, 0.6);
 }
 
 .project__img {
@@ -542,7 +543,7 @@ section {
 }
 
 .testimonial__speech-bubble a {
-  color: var(--color-pink);
+  color: var(--color-darkmint);
 }
 
 .testimonial__speech-bubble p {
@@ -556,7 +557,9 @@ section {
 .contact__rights {
   color: var(--color-black);
 }
-
+.contact__rights {
+  font-size: 0.9em;
+}
 .contact__email span,
 .contact__mobile span {
   display: inline;
