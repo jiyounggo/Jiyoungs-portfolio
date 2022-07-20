@@ -5,10 +5,10 @@
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
     --color-pink: #f5b5e7f6;
-    --color-dark-pink: #fa2cc6;
-    --color-black: #4d4d4d;
-    --color-dark-grey: #4d4d4d;
-    --color-grey: #616161;
+    --color-mint:  #8ab3a7;
+    --color-darkmint: #719489;
+    --color-light-black: #333;
+    --color-background: #F6F6F6;
     --color-light-grey: #7c7979;
     --color-blue: #73aace;
     --color-yellow: #fff7d1;
@@ -46,7 +46,7 @@
   
   a {
     text-decoration: none;
-    color: var(--color-white);
+    color: black;
   }
   
   ul {
@@ -76,7 +76,7 @@
   h2 {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
+    color: var(--color-light-black);;
     margin: 8px 0;
   }
   
@@ -98,55 +98,104 @@
 
 #navbar{
   position: fixed;
+  top:0px;
   width: 100%;
-  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  color: var(--color-white);
+  
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
-
 }
+.navbar__menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar__menu__item {
+  width: 80PX;
+  text-align: center;
+  margin: 0px;
+  display: inline-block;
+  line-height: 40px;
+ 
+}
+.navbar__name{
+  margin-left: 40px; 
+  margin-right: 40px;
+  width: 120PX;
+}
+
+
 
 #navbar.navbar--dark{
-  background-color: var(--color-pink);
-  padding: 16px;
+  background-color:#8ab3a7;
+  background-color: rgba(117, 190, 218, 0.5);  
+  margin: 0px;
+}
 
-}
-.navbar__logo{
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-}
 
 .navbar__logo img{
  width: 25px;
+ color:#df9fac;
 }
 
 .navbar__logo a{
 position: relative;
 bottom:7px;
+color:#df9fac;
+font-size: var(--font-medium);
 
 }
 .navbar__menu
 {
-
+  width: 80%;
   display: flex;
   cursor: pointer;
+text-align: center;
+justify-content: center;
+align-items: center;  
+}
 
-}
-.active{
-  
-  margin: 0 4px;
-  cursor: pointer;
-}
 .navbar__menu__item{
-  margin: 10px;
+  width:100px;
+ }
+ .navbar__menu__item p{
+
+  
+ }
+.navbar__title{
+  display: none;
+}
+
+
+.navbar__name img{
+  width: 80px;
+  height: 70px;
+}
+
+
+.navbar__menu__item.active{
+  border:2px solid var(--color-white);
+  border-radius:4px ;
+ 
 }
 .navbar__menu__item:hover{
-  background-color: var(--color-dark-pink);
+  background-color: #8ab3a7;
   border-radius: 4px;
+}
+.navbar__menu a{
+  display: inline-block;
+  line-height: 40px;
+  font-size: 2.0em;
+ 
+}
+.navbar__menu span{
+  display: inline-block;
+  line-height: 60px;
+ 
 }
 
 .navbar__toggle-btn{
@@ -161,28 +210,40 @@ bottom:7px;
 
 /*home*/
 #home{
-background: url('img/1.png') center/cover no-repeat;
-padding: 40px;
-text-align: center;
+  background: url('img/desk.jpg') center/cover no-repeat;
+  padding: 40px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  height: 600px;
+  margin-top:0px ;
+
+}
+.home_left{
+ margin:auto;
+ margin-top: 200px;
 }
 .home__title,.home_description{
-
-color: var(--color-white);
+color: #6E6E6E;
 }
-
+.profileimg{
+margin-left: 0px;
+}
 .home__avatar{
-  width: 250px;
-  height: 270px;
+  width: 300px;
+  height: 320px;
   border-radius: 50%;
-  border:2px solid var(--color-white)
+  border:2px solid #ecacb9;
+  margin-top: 90px;
 }
 
 .home__contact{
+  color:black;
   font-size:var(--font-regular);
   font-weight: var(--weight-regular);
   margin: 25px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 1px solid black;
   border-radius: var(--size-border-radius);
 }
 
@@ -198,6 +259,9 @@ section{
   display: flex;
   justify-content: space-evenly;
   margin: 80px 0;
+}
+.major{
+  flex-basis: 100%;
 }
 
 .major__icon{
@@ -216,7 +280,7 @@ section{
 }
 
 .major__icon:hover i{
-  color: var(--color-pink);
+  color: var(--color-mint);
   transform: rotate(-30deg) scale(1.2);
 }
 
@@ -231,7 +295,7 @@ color:var(--color-dark-grey);
 
 .major__description{
   font-size:var(--font-small) ;
-  margin: 0 16px;
+  margin: 16px 0px;
 }
 
 .job{
@@ -259,16 +323,23 @@ color:var(--color-dark-grey);
 }
 
 /*Skill*/
-#skills{
-  background-color: var(--color-orange);
+#skills {
+  
  
 }
 
+
+.section__container
+{
+  max-width: 1100px;
+  margin: auto;
+}
+
 .sillset__left{
-  background-color: #504c39;
+  background-color: white;
   flex-basis: 60%;
   padding: 20px 40px;
- 
+  border: 2px solid #719489;
 }
 .skill{
   margin-bottom: 20px;
@@ -276,22 +347,37 @@ color:var(--color-dark-grey);
 
 .skillset__right{
   flex-basis: 40%;
+  background-color: white;
+  border: 2px solid #719489;
 }
 
-.section__container
-{
-  max-width: 1200px;
-  margin: auto;
+.etc{
+  border-top: 2px solid #719489;
 }
+
+
+
+.section__container h2:after{
+  display: block;
+  position: relative;
+ content: "";
+ left: 48%;
+margin-top: 10px;
+ width:40px;
+ height: 1px;
+ background-color: #0099FF;
+}
+
 
 .skillset{
   display: flex;
   background-color: var(--color-dark-grey);
-  color: var(--color-white);
+  color: black;
+  margin-top: 39px;
 }
 
 .skillset__title{
-  color: var(--color-white);
+  color: black;
 }
 
 .skill__description{
@@ -301,11 +387,12 @@ color:var(--color-dark-grey);
 
 .skill__bar{
   width: 100%;
-  height: 1px;
-  background-color: var(--color-white);
+  height: 3px;
+  background-color: pink;
 }
 
 .skill__value{
+  width: 90%;
 height: 3px;
 background-color: var(--color-orange);
 
@@ -336,7 +423,7 @@ background-color: var(--color-orange);
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-mint);
   color: var(--color-white);
 }
 
@@ -442,7 +529,7 @@ background-color: var(--color-dark-white);
 /* Testimonial */
 
 #testimonials{
-  background-color: var(--color-light-white);
+  background-color:  #F6F6F6;
 }
 
 .tetimonials{
@@ -480,13 +567,13 @@ background-color: var(--color-dark-white);
 
 /* Contact */
 #contact{
-  background-color : var(--color-pink);
+ 
 }
 
 .contact__title,
 .contact__email,
 .contact__rights{
-  color:var(--color-white);
+  color: var(--color-black);
 }
 
 .contact__title{
@@ -514,7 +601,7 @@ background-color: var(--color-dark-white);
   width: 70px;
   height: 70px;
   font-size: 50px;
-  color: var(--color-dark-pink);
+  color: #8ab3a7;
   opacity: 0;
   /*  display: none 에니메이션 추가가 힘들기 때문에 display: none  보단  opacity: 0사용 */
   pointer-events: none;
@@ -536,105 +623,152 @@ background-color: var(--color-dark-white);
 
 /*For below 768px screen width */
 
-@media screen  and (max-width : 760px){
+@media screen  and (max-width : 1050px){
   .navbar__toggle-btn{
+    color: #000000;
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar span, .navbar__name{
+    display: none;
+  }
+
+  .navbar__menu{
+    text-align: center;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    
+  
+    
+  }
+  .navbar__title{
+    display: block;
+    text-align: left;
+  
+  }
+
+  .navbar__menu__item{
+    margin: 0px;
+    width: 100%;
+    padding: 10px;
+  }
+  .navbar__menu__item.active{
+    border:2px solid var(--color-white);
+    border-right-width:0em;
+    border-left-width:0em;
+    border-radius: 0%;
+   
+  }
+  #home{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: 800px;
+  }
+  .home_left{
+    margin-top:400px ;
+  }
+  .profileimg {
+    margin: 0px;
+  }
+  .profileimg img{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 30px;
+  }
+
+  .open{
     display: block;
   }
 
-  #navbar{
+  .about__majors{
     flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--color-pink);
+    align-items: center;
+  margin-top: 20px;
+  }
+  .major__description{
+    margin-bottom: 35px;
   }
 
-.navbar__menu{
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  display: none;
-  background-color: var(--color-pink);
-}
+  .skillset{
+    flex-direction: column;
+  }
 
-.open{
-  display: block;
-}
-
-.about__majors{
-  flex-direction: column;
-  align-items: center;
-margin-top: 20px;
-}
-.major__description{
-  margin-bottom: 35px;
-}
-
-.skillset{
-  flex-direction: column;
-}
-
-.category__btn{
-  margin: 4px 0;
- 
-}
+  .category__btn{
+    margin: 4px 0;
+  
+  }
 
 
 
-.project{
-  flex-grow:1;
-}
+  .project{
+    flex-grow:1;
+  }
 
-.testimonial{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.testimonial__speech-bubble{
-  order:1;
-}
+  .testimonial__speech-bubble{
+    order:1;
+  }
 
-.testimonial img{
-  margin-bottom: 13px;
-  width: 180px;
-  height: 200px;
-}
-}
+  .testimonial img{
+    margin-bottom: 13px;
+    width: 180px;
+    height: 200px;
+  }
+  }
 
-/* loadging... */
-*{
-  margin: 0 auto; 
-}
+  /* loadging... */
+  *{
+    margin: 0 auto; 
+  }
 
-.loader{
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:lightpink;
-  z-index: 9999;
-  opacity: 1;
-  transition: all 1000ms ease;
-}
+  .loader{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 9999;
+    opacity: 1;
+    transition: all 1000ms ease;
+  }
 
-.loader .load {
-  color: white;
-  position: absolute;
-  top: 505px;
-  left: 550px;
-}
-.loader i{
-  font-size: 80px;
-  position: absolute;
-  top: 50%; left: 50%;
-  margin: -40px 0 0 -40px;
-  color: #fff;
-}
+  .loader .load {
+    
+    color:  #8ab3a7;
+    position: relative;
+    transform: translateY(-40px);
+    animation: loadingTextAni ease-in-out 1s alternate infinite;
+  
+  }
+  .loader i {
+    font-size: 80px;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin: -40px 0 0 -40px;
+    color:  #8ab3a7;
+  }
 
-.wrap{
-  position: relative;
-  width: 600px;
-  height: 1500px;
-  padding: 50px 0;
-  background: #b6c9f0;
-}
+  .wrap{
+    position: relative;
+    width: 600px;
+    height: 1500px;
+    padding: 50px 0;
+    background: #b6c9f0;
+  }
 
