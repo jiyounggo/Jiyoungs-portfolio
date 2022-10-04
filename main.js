@@ -124,7 +124,6 @@ const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"
 window.addEventListener('load', () => {
   selectNavItem(navItems[selectedNavIndex]);
 });
-
 function selectNavItem(selected) {
   selectedNavItem.classList.remove('select');
   selectedNavItem = selected;
@@ -135,7 +134,7 @@ let selectedNavItem = navItems[0];
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.3,
+  threshold: 0.4,
 };
 
 const obserCallback = (entries, observer) => {
@@ -153,7 +152,7 @@ const obserCallback = (entries, observer) => {
 const observer = new IntersectionObserver(obserCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
-window.addEventListener('wheel', () => {
+window.addEventListener('scroll', () => {
   if (window.scrollY === 0) {
     selectedNavIndex = 0;
   } else if (window.scrollY + window.innerHeight === document.body.scrollHeight) {
